@@ -5,7 +5,7 @@ account: mike12187
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 13081484
-bundleId: 9250754
+bundleId: 9250859
 url: https://mike12187.shinyapps.io/demo_patientprofiler/
 version: 1
 asMultiple: FALSE

@@ -57,7 +57,7 @@ server <- function(id, df) {
     })
     output$out_randdt = shiny$renderText({
       shiny$req(df())
-      df()$RANDDT[[1]]
+      as.character(df()$RANDDT[[1]])
     })
     output$out_arm = shiny$renderText({
       shiny$req(df())
