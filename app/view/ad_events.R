@@ -21,7 +21,7 @@ server <- function(id, df) {
     output$chart = shiny$renderPlot({
       shiny$validate(shiny$need(nrow(df()) > 0, "No AE data available for this patient."))
       gplot = # Create the line chart
-        ggplot(df(), aes(y = reorder(AETERM, rev(ASTDT)))) +
+        ggplot(df(), aes(y = reorder(AETERM, ASTDT))) +
         geom_segment(aes(x = ASTDY, xend = AENDY, yend = AETERM, color = AESEV), size = 1, show.legend = F) +
         geom_point(aes(x = ASTDY, color = AESEV), shape = 1, size = 3, show.legend = F) +
         geom_point(aes(x = AENDY, shape = AEOUT, color = AESEV), size = 3) +

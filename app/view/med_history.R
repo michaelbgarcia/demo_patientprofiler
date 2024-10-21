@@ -18,7 +18,7 @@ ui <- function(id) {
 server <- function(id, df) {
   shiny$moduleServer(id, function(input, output, session) {
     output$table = reactable$renderReactable({
-      shiny$req(df())
+      shiny$validate(shiny$need(nrow(df()) > 0, "No MH data available for this patient."))
       dat = df() |> select(
         USUBJID, MHSEQ, MHTERM, MHLLT, MHDECOD, MHCAT, MHBODSYS, MHSEV
       ) |> 
