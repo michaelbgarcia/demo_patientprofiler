@@ -1,0 +1,57 @@
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.info-block h3 {
+    color: #0078D4;
+    margin-bottom: 8px;
+    font-size: 1em;
+}
+
+.info-block p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+.info-block-sub {
+  display: flex;
+  flex-wrap: wrap; /* Allows the items to wrap to the next line */
+  gap: 10px; /* Optional: adds space between boxes */
+}
+
+.info-block-sub p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+.info-row-sub {
+  flex: 1 1 calc(50% - 10px); /* Each box takes 50% width, accounting for the gap */
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-col-2 {
+  justify-content: left;
+}
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.table-container {
+  display: grid;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.table-cell {
+  display: flex;
+  width: 100%; /* Two equal-width columns */
+  justify-content: left;
+}
